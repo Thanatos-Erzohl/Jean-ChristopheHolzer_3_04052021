@@ -1,0 +1,35 @@
+// === @import =================================================================================================================================== //
+    @import "./utils/variables";
+    @import "./utils/mixins";
+    @import "./utils/fonctions";
+// === end: @import ============================================================================================================================== //
+
+// === header ==================================================================================================================================== //
+    header
+    {
+        width: 100%;
+
+        padding: $padding-large $padding-large $padding-small $padding-large;
+
+        background-color: white;
+    }
+
+    #navigation-main >  ul
+    {
+        width: 100%;
+        list-style-type: none;
+
+        display: flex;
+        flex-direction: row;
+    }
+
+    #arrow
+    {
+        width: $pictogram-width;
+        height: $pictogram-height;
+    }
+
+    #website-emblem{ margin-left: calc(((100% - #{$website-emblem-width}) / 2) - #{$pictogram-width}); }
+
+    #website-emblem img{ width: $website-emblem-width; }
+// === end: header =============================================================================================================================== //

@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "shrikhand";
+  src: url("../../../data/font/shrikhand/Shrikhand-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "roboto";
+  src: url("../../../data/font/roboto/Roboto-Regular.ttf") format("truetype");
+}
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  font-family: roboto, serif;
+  color: black;
+}
+
+html {
+  width: max(100%, 300px);
+  background-color: white;
+  font-size: 1em;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+h1, h2 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,27 @@
+header {
+  width: 100%;
+  padding: 20px 20px 10px 20px;
+  background-color: white;
+}
+
+#navigation-main > ul {
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+
+#arrow {
+  width: 24px;
+  height: 24px;
+}
+
+#website-emblem {
+  margin-left: calc(((100% - 195.566px) / 2) - 24px);
+}
+
+#website-emblem img {
+  width: 195.566px;
+}
+
+/*# sourceMappingURL=header.css.map */
