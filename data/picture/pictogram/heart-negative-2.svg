@@ -14,7 +14,7 @@
    viewBox="0 0 158.75 158.75"
    version="1.1"
    id="svg8"
-   sodipodi:docname="heart-negative.svg"
+   sodipodi:docname="heart-negative-2.svg"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
   <defs
      id="defs2" />
@@ -50,7 +50,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -65,11 +65,5 @@
        transform="scale(0.26458333)"
        id="path4531"
        inkscape:connector-curvature="0" />
-    <path
-       sodipodi:nodetypes="ccccc"
-       inkscape:connector-curvature="0"
-       id="path4533"
-       d="M 21.16666,85.33334 C -37.04167,21.833333 68.79166,-15.20833 79.375,43 89.95833,-15.20833 195.79167,21.833333 137.58333,85.33334 L 79.375,148.83333 Z"
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:5.29166667;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   </g>
 </svg>

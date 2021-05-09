@@ -1,0 +1,24 @@
+// === button ===================================================================================================================================== //
+    .button
+    {
+        padding: $padding-medium $padding-large;
+
+        border-radius: calc((#{$padding-medium} * 2 + 1em) / 2);
+        
+        background: linear-gradient(to top left, $color-1, $color-2);
+
+        text-decoration: none;
+        color: white;
+
+        @include shadow;
+
+        transition: all 200ms;
+
+        &:hover
+        {
+            background: linear-gradient(to top left, lighten($color-1, 5%), lighten($color-2, 5%));
+
+            @include shadow-hover;
+        }
+    }
+// === end: button ================================================================================================================================ //

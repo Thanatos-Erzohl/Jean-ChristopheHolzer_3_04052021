@@ -11,11 +11,11 @@
 
         padding: $padding-large;
 
-        background-color: $color-5;
+        background-color: $color-background-3;
 
-        > img
+        > img // emblem
         {
-            width: calc(#{$website-emblem-width} / 2);
+            width: $website-emblem-small-width;
 
             margin-bottom: $padding-large;
         }

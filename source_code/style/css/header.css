@@ -1,27 +1,25 @@
 header {
   width: 100%;
   padding: 20px 20px 10px 20px;
-  background-color: white;
+  margin-bottom: 3px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 3px 3px #c0c0c0;
 }
-
-#navigation-main > ul {
+header #navigation-main > ul {
   width: 100%;
   list-style-type: none;
   display: flex;
   flex-direction: row;
 }
-
-#arrow {
-  width: 24px;
-  height: 24px;
+header #navigation-main > ul #arrow {
+  width: 20px;
+  height: 20px;
 }
-
-#website-emblem {
-  margin-left: calc(((100% - 195.566px) / 2) - 24px);
+header #navigation-main > ul #website-emblem {
+  margin-left: calc(((100% - 170px) / 2) - 20px);
 }
-
-#website-emblem img {
-  width: 195.566px;
+header #navigation-main > ul #website-emblem img {
+  width: 170px;
 }
 
 /*# sourceMappingURL=header.css.map */

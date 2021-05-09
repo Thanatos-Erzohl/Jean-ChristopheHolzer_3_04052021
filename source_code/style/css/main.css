@@ -1,10 +1,24 @@
-@font-face {
-  font-family: "shrikhand";
-  src: url("../../../data/font/shrikhand/Shrikhand-Regular.ttf") format("truetype");
+.button {
+  padding: 15px 20px;
+  border-radius: calc((15px * 2 + 1em) / 2);
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  text-decoration: none;
+  color: white;
+  box-shadow: 5px 5px 5px #c0c0c0;
+  transition: all 200ms;
 }
+.button:hover {
+  background: linear-gradient(to top left, #a16be0, #ff93e1);
+  box-shadow: 8px 8px 8px #a7a7a7;
+}
+
 @font-face {
   font-family: "roboto";
   src: url("../../../data/font/roboto/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "shrikhand";
+  src: url("../../../data/font/shrikhand/Shrikhand-Regular.ttf") format("truetype");
 }
 * {
   box-sizing: border-box;
@@ -16,7 +30,7 @@
 
 html {
   width: max(100%, 300px);
-  background-color: white;
+  background-color: #FFFFFF;
   font-size: 1em;
 }
 
