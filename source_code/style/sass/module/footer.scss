@@ -1,0 +1,56 @@
+// === @import ===================================================================================================================================== //
+    @import "../util/variable";
+    @import "../util/mixin";
+    @import "../util/fonction";
+// === end: @import ================================================================================================================================ //
+
+
+
+// === footer ===================================================================================================================================== //
+    footer
+    {
+        width: 100%;
+
+        padding: $padding-large;
+
+        background-color: $color-background-3;
+
+
+
+        > img // website's emblem
+        {
+            width: $website-emblem-small-width;
+
+            margin-bottom: $margin-large;
+        }
+
+        > ul
+        {
+            width: 100%;
+
+            list-style-type: none;
+
+
+
+            >li > a
+            {
+                text-decoration: none;
+
+                display: flex;
+                flex-direction: row;
+
+
+
+                > img
+                {
+                    width: $pictogram-small-width;
+                    height: $pictogram-small-height;
+
+                    margin-right: $margin-small;
+                }
+
+                > p{ color: $color-text-2; }
+            }
+        }
+    }
+// === end: footer ================================================================================================================================ //

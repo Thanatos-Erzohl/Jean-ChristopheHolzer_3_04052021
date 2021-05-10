@@ -11,14 +11,14 @@ header #navigation-main > ul {
   display: flex;
   flex-direction: row;
 }
-header #navigation-main > ul #arrow {
+header #navigation-main > ul #back_arrow {
   width: 20px;
   height: 20px;
 }
 header #navigation-main > ul #website-emblem {
   margin-left: calc(((100% - 170px) / 2) - 20px);
 }
-header #navigation-main > ul #website-emblem img {
+header #navigation-main > ul #website-emblem > img {
   width: 170px;
 }
 

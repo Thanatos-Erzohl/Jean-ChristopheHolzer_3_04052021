@@ -3,29 +3,29 @@
 
 
 <html lang = "fr">
-	<head>
-		<meta charset = "UTF-8">
+    <head>
+        <meta charset = "UTF-8">
 
-		<meta name = "author" content = "Jean-Christophe Holzer">
-		<meta name = "description" content = "">
-		<meta name = "keyword" content = "">
-		<meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+        <meta name = "author" content = "Jean-Christophe Holzer">
+        <meta name = "description" content = "">
+        <meta name = "keyword" content = "">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
 
-		<title>ohmyfood</title>
-		<!-- <link rel = "icon" type = "image/png" href = "data/picture/emblem/.svg"> -->
-		
-		<link rel = "stylesheet" type = "text/css" href = "source_code/style/css/main.css">
-		<link rel = "stylesheet" type = "text/css" href = "source_code/style/css/header.css">
-		<link rel = "stylesheet" type = "text/css" href = "source_code/style/css/footer.css">
-		<link rel = "stylesheet" type = "text/css" href = "source_code/style/css/index.css">
-	</head>
+        <title>ohmyfood</title>
+        <link rel = "icon" type = "image/png" href = "data/picture/emblem/ohmyfood@2x-short.svg">
+        
+        <link rel = "stylesheet" type = "text/css" href = "source_code/style/css/base/main.css">
+        <link rel = "stylesheet" type = "text/css" href = "source_code/style/css/module/header.css">
+        <link rel = "stylesheet" type = "text/css" href = "source_code/style/css/module/footer.css">
+        <link rel = "stylesheet" type = "text/css" href = "source_code/style/css/page/index.css">
+    </head>
 
-	<body>
-		<header>
-			<!-- === navigation ============================================================================================================================== -->
+    <body>
+        <header>
+            <!-- === navigation ============================================================================================================================== -->
 				<nav id = navigation-main>
 					<ul>
-						<li id = "arrow">
+						<li id = "back_arrow">
 							<a href = "index.html">
 								<img src = "data/picture/pictogram/arrow-left-solid.svg" alt = "">
 							</a>
@@ -39,131 +39,129 @@
 					</ul>
 				</nav>
 			<!-- === end: navigation ========================================================================================================================= -->
-		</header>
+        </header>
 
-		<main>
-			<!-- === location ================================================================================================================================ -->
-				<div id = "location">
-					<img src = "data/picture/pictogram/map-marker-alt-solid.svg" alt = "">
+        <main>
+            <div id = "left-desktop">
+                <!-- === location ============================================================================================================================ -->
+                    <div id = "location">
+                        <img src = "data/picture/pictogram/map-marker-alt-solid.svg" alt = "">
 
-					<p>Paris, Belleville</p>
-				</div>
-			<!-- === end: location =========================================================================================================================== -->
+                        <p>Paris, Belleville</p>
+                    </div>
+                <!-- === end: location ======================================================================================================================= -->
 
-			<!-- === introduction ============================================================================================================================ -->
-				<div id = "introduction">
-					<h1>Réservez le menu qui vous convient</h1>
-					<p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+                <!-- === introduction ======================================================================================================================== -->
+                    <div id = "introduction">
+                        <h1>Réservez le menu qui vous convient</h1>
+                        <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
 
-					<a class = "button" href = "#restaurant">Explorer nos restaurants</a>
-				</div>
-			<!-- === end: introduction ======================================================================================================================= -->
+                        <a class = "button" href = "#restaurant">Explorer nos restaurants</a>
+                    </div>
+                <!-- === end: introduction =================================================================================================================== -->
 
-			<!-- === functioning ============================================================================================================================= -->
-				<div id = "functioning">
-					<h2>Fonctionnement</h2>
+                <!-- === functioning ========================================================================================================================= -->
+                    <div id = "functioning">
+                        <h2>Fonctionnement</h2>
 
-					<div class = "functioning-step" id = "functioning-step-1">
-						<div class = "functioning-step-number">
-							<p>1</p>
-						</div>
+                        <div class = "functioning-step" id = "functioning-step-1">
+                            <p class = "functioning-step-number">1</p>
 
-						<div class = "functioning-step-pictogram"></div>
+                            <div class = "functioning-step-pictogram"></div>
 
-						<p>Choisissez un restaurant</p>
-					</div>
+                            <p class = "functioning-step-description">Choisissez un restaurant</p>
+                        </div>
 
-					<div class = "functioning-step" id = "functioning-step-2">
-						<div class = "functioning-step-number">
-							<p>2</p>
-						</div>
+                        <div class = "functioning-step" id = "functioning-step-2">
+                            <p class = "functioning-step-number">2</p>
 
-						<div class = "functioning-step-pictogram"></div>
+                            <div class = "functioning-step-pictogram"></div>
 
-						<p>Composez votre menu</p>
-					</div>
+                            <p class = "functioning-step-description">Composez votre menu</p>
+                        </div>
 
-					<div class = "functioning-step" id = "functioning-step-3">
-						<div class = "functioning-step-number">
-							<p>3</p>
-						</div>
+                        <div class = "functioning-step" id = "functioning-step-3">
+                            <p class = "functioning-step-number">3</p>
 
-						<div class = "functioning-step-pictogram""></div>
+                            <div class = "functioning-step-pictogram"></div>
 
-						<p>Dégustez au restaurant</p>
-					</div>
-				</div>
-			<!-- === end: functioning ======================================================================================================================== -->
+                            <p class = "functioning-step-description">Dégustez au restaurant</p>
+                        </div>
+                    </div>
+                <!-- === end: functioning ==================================================================================================================== -->
+            </div>
 
-			<!-- === restaurant ============================================================================================================================== -->
-				<div id = "restaurant">
-					<h2>Restaurants</h2>
+            <div id = "right-desktop">
+                <!-- === restaurant ========================================================================================================================== -->
+                <div id = "restaurant">
+                    <h2>Restaurants</h2>
 
-					<div id = "restaurant-card_area">
-						<a class = "restaurant-card" id = "restaurant-card-1" href = "source_code/html/restaurant-lapalletedugout.html">
-							<div class = "restaurant-card-illustration">
-								<p class = "restaurant-card-new">Nouveau</p>
-							</div>
+                    <div id = "restaurant-card_area">
+                        <div class = "restaurant-card" id = "restaurant-card-1" >
+                            <a href = "source_code/html/restaurant-lapalletedugout.html">
+                                <div class = "restaurant-card-illustration">
+                                    <p class = "restaurant-card-new">Nouveau</p>
+                                </div>
 
-							<div>
-								<div>
-									<p class = "restaurant-card-name">La palette du goût</p>
-									<p class = "restaurant-card-location">Ménilmontant</p>
+                                <div class = "restaurant-card-info">
+									<p class = "restaurant-card-info-name">La palette du goût</p>
+									<p class = "restaurant-card-info-location">Ménilmontant</p>
 								</div>
+                            </a>
 
-								<div class = "favorite"><img src = "data/picture/pictogram/heart-negative.svg" alt = ""></div>
-							</div>
-						</a>
+                            <div class = "favorite"><img src = "data/picture/pictogram/heart-negative.svg" alt = ""></div>
+                        </div>
 
-						<a class = "restaurant-card" id = "restaurant-card-2" href = "source_code/html/restaurant-lanoteenchantee.html">
-							<div class = "restaurant-card-illustration">
-								<p class = "restaurant-card-new">Nouveau</p>
-							</div>
+                        <div class = "restaurant-card" id = "restaurant-card-2" >
+                            <a href = "source_code/html/restaurant-lanoteenchantee.html">
+                                <div class = "restaurant-card-illustration">
+                                    <p class = "restaurant-card-new">Nouveau</p>
+                                </div>
 
-							<div>
-								<div>
-									<p class = "restaurant-card-name">La note enchantée</p>
-									<p class = "restaurant-card-location">Charonne</p>
+                                <div class = "restaurant-card-info">
+									<p class = "restaurant-card-info-name">La note enchantée</p>
+									<p class = "restaurant-card-info-location">Charonne</p>
 								</div>
+                            </a>
 
-								<div class = "favorite"><img src = "data/picture/pictogram/heart-negative.svg" alt = ""></div>
-							</div>
-						</a>
+                            <div class = "favorite"><img src = "data/picture/pictogram/heart-negative.svg" alt = ""></div>
+                        </div>
 
-						<a class = "restaurant-card" id = "restaurant-card-3" href = "source_code/html/restaurant-alafrancaise.html">
-							<div class = "restaurant-card-illustration">
-							</div>
+                        <div class = "restaurant-card" id = "restaurant-card-3" >
+                            <a href = "source_code/html/restaurant-alafrancaise.html">
+                                <div class = "restaurant-card-illustration">
+                                </div>
 
-							<div>
-								<div>
-									<p class = "restaurant-card-name">À la française</p>
-									<p class = "restaurant-card-location">Cité Rouge</p>
+                                <div class = "restaurant-card-info">
+									<p class = "restaurant-card-info-name">À la française</p>
+									<p class = "restaurant-card-info-location">Cité Rouge</p>
 								</div>
+                            </a>
 
-								<div class = "favorite"><img src = "data/picture/pictogram/heart-negative.svg" alt = ""></div>
-							</div>
-						</a>
+                            <div class = "favorite"><img src = "data/picture/pictogram/heart-negative.svg" alt = ""></div>
+                        </div>
 
-						<a class = "restaurant-card" id = "restaurant-card-4" href = "source_code/html/restaurant-ledelicedessens.html">
-							<div class = "restaurant-card-illustration">
-							</div>
+                        <div class = "restaurant-card" id = "restaurant-card-4" >
+                            <a href = "source_code/html/restaurant-ledelicedessens.html">
+                                <div class = "restaurant-card-illustration">
+                                </div>
 
-							<div>
-								<div>
-									<p class = "restaurant-card-name">Le délice des sens</p>
-									<p class = "restaurant-card-location">Folie-Méricourt</p>
+                                <div class = "restaurant-card-info">
+									<p class = "restaurant-card-info-name">Le délice des sens</p>
+									<p class = "restaurant-card-info-location">Folie-Méricourt</p>
 								</div>
+                            </a>
 
-								<div class = "favorite"><img src = "data/picture/pictogram/heart-negative.svg" alt = ""></div>
-							</div>
-						</a>
-					</div>
-				</div>
-			<!-- === end: restaurant ========================================================================================================================= -->
-		</main>
+                            <div class = "favorite"><img src = "data/picture/pictogram/heart-negative.svg" alt = ""></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- === end: restaurant ===================================================================================================================== -->
+            </div>
+        </main>
 
-		<footer>
-			<img src = "data/picture/emblem/ohmyfood@2x-white.svg" alt = "Emblème ohmyfood">
+        <footer>
+            <img src = "data/picture/emblem/ohmyfood@2x-white.svg" alt = "Emblème ohmyfood">
 
 			<ul>
 				<li> <!-- suggest a restaurant -->
@@ -188,6 +186,6 @@
 					<a href = "mailto:#"><p>Contact</p></a>
 				</li>
 			</ul>
-		</footer>
-	</body>
+        </footer>
+    </body>
 </html>

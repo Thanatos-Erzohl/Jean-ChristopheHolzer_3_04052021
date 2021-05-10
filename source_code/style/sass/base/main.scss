@@ -1,21 +1,24 @@
 // === @import ==================================================================================================================================== //
-    @import "./utils/variables";
-    @import "./utils/mixins";
-    @import "./utils/fonctions";
-    @import "./utils/component";
+    @import "../util/variable";
+    @import "../util/mixin";
+    @import "../util/fonction";
+
+    @import "../component/component";
 // === end: @import =============================================================================================================================== //
+
+
 
 // === @font-face ================================================================================================================================= //
     @font-face
     {
         font-family: 'roboto';
-        src: url('../../../data/font/roboto/Roboto-Regular.ttf') format('truetype');
+        src: url('../../../../data/font/roboto/Roboto-Regular.ttf') format('truetype');
     }
 
     @font-face
     {
         font-family: 'shrikhand';
-        src: url('../../../data/font/shrikhand/Shrikhand-Regular.ttf') format('truetype');
+        src: url('../../../../data/font/shrikhand/Shrikhand-Regular.ttf') format('truetype');
     }
 // === end: @font-face ============================================================================================================================ //
 
@@ -28,7 +31,7 @@
         margin: 0px;
 
         font-family: roboto, serif;
-        color: rgb(0, 0, 0);
+        color: $color-text-1;
     }
 
     html

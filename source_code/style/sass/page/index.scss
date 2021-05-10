@@ -1,0 +1,409 @@
+// === @import ==================================================================================================================================== //
+    @import "../util/variable";
+    @import "../util/mixin";
+    @import "../util/fonction";
+// === end: @import =============================================================================================================================== //
+
+
+
+// === header ===================================================================================================================================== //
+    #back_arrow{ visibility: hidden; }
+// === end: header ================================================================================================================================ //
+
+// === index ====================================================================================================================================== //
+    main
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // === location =============================================================================================================================== //
+        #location
+        {
+            width: 100%;
+
+            padding: $padding-medium $padding-large;
+
+            background-color: darken($color-background-2, 5%);
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+
+
+            > img
+            {
+                width: $pictogram-small-width;
+                height: $pictogram-small-height;
+
+                margin-right: $margin-large;
+            }
+
+            > p
+            {
+                font-size: 1rem;
+                font-weight: bold;
+            }
+        }
+    // === end: location ========================================================================================================================== //
+
+    // === introduction ========================================================================================================================== //
+        #introduction
+        {
+            width: 100%;
+
+            width: 100%;
+
+            padding: calc(#{$padding-large} * 2) $padding-large calc(#{$padding-large} * 3) $padding-large;
+
+            background-color: $color-background-2;
+
+            text-align: center;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+
+
+            h1{ margin-bottom: $margin-medium; }
+
+            p{ margin-bottom: calc(#{$margin-large} * 1.5); }
+        }
+    // === end: introduction ===================================================================================================================== //
+
+    // === functioning =========================================================================================================================== //
+        #functioning
+        {
+            width: 100%;
+
+            padding: calc(#{$padding-large} * 2) $padding-large;
+
+            background-color: $color-background-1;
+
+
+
+            > h2{ margin-bottom: calc(#{$margin-large} * 1.5); }
+
+            > .functioning-step
+            {
+                width: calc(100% - ((1em + 10px) / 2)); // left offset for step number
+                height: calc((#{$pictogram-medium-height} * 3)  + 1em);
+
+                margin-bottom: $margin-large;
+                margin-left: calc((1em + 10px) / 2); // left offset for step number
+
+                border-radius: $border-radius-medium;
+
+                background-color: $color-background-2;
+
+                @include shadow;
+
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                position: relative;
+                z-index: 1;
+
+
+
+                &::after
+                {
+                    border-radius: calc(#{$border-radius-medium} - 1px);
+
+                    background-color: lighten($color-1, 30%);
+
+                    opacity: 0;
+
+                    content: "";
+
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    z-index: -1;
+                }
+
+                > .functioning-step-pictogram
+                {
+                    width: $pictogram-medium-width;
+                    height: $pictogram-medium-height;
+
+                    margin-right: $margin-large;
+
+                    background-size: contain;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+
+                    position: relative;
+                    z-index: 1;
+
+
+
+                    &::after
+                    {
+                        content: "";
+
+                        background-size: contain;
+                        background-position: center center;
+                        background-repeat: no-repeat;
+
+                        opacity: 0;
+
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        z-index: -1;
+                    }
+                }            
+
+                > .functioning-step-number
+                {
+                    width: calc(1em + 10px);
+                    height: calc(1em + 10px);
+
+                    margin-left: calc(0px - ((1em + 10px) / 2)); // left offset (half outside) 
+                    margin-right: $margin-large;
+
+                    border-radius: calc((1em + 10px) / 2);
+
+                    background-color: $color-1;
+
+                    color: $color-text-2;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                > .functioning-step-descriptionp
+                {
+                    margin-right: $margin-large;
+
+                    font-weight: bold;
+                }
+            }
+
+            > #functioning-step-
+            {
+                @for $i from 1 through 3
+                {
+                    &#{$i}
+                    {
+                        &::after{ animation: functioning-step 6000ms (1500ms * ($i - 1)) infinite; }
+
+                        > .functioning-step-pictogram
+                        {
+                            background-image: url("../../../../data/picture/pictogram/step-#{$i}.svg");
+
+                            &::after
+                            {
+                                background-image: url("../../../../data/picture/pictogram/step-#{$i}-2.svg");
+
+                                animation: functioning-step 6000ms (1500ms * ($i - 1)) infinite;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    // === end: functioning ====================================================================================================================== //
+
+    // === restaurant ============================================================================================================================= //
+        #restaurant
+        {
+            width: 100%;
+
+            padding: calc(#{$padding-large} * 2) $padding-large;
+
+            background-color: $color-background-2;
+
+            display: flex;
+            flex-direction: column;
+
+
+
+            > h2{ margin-bottom: calc(#{$margin-large} * 1.5); }
+
+            > #restaurant-card_area
+            {
+                display: flex;
+                flex-direction: column;
+
+
+
+                > .restaurant-card
+                {
+                    margin-bottom: $margin-large;
+
+                    border-radius: $border-radius-medium;
+
+                    @include shadow;
+
+                    position: relative;
+
+
+
+                    > a
+                    {
+                        text-decoration: none;
+
+
+                        
+                        > .restaurant-card-illustration
+                        {
+                            width: min(100%, 500px);
+
+                            padding-bottom: min(54%, 270px);
+
+                            border-radius: $border-radius-medium $border-radius-medium 0px 0px;
+
+                            background-size: cover;
+                            background-position: center center;
+
+                            position: relative;
+
+
+
+                            > .restaurant-card-new
+                            {
+                                padding: 5px $padding-small;
+
+                                border-radius: $border-radius-small;
+
+                                background-color: $color-3;
+
+                                font-size: 0.9rem;
+                                font-weight: bold;
+                                color: darken($color-3, 40%);
+
+                                position: absolute;
+                                top: $padding-medium;
+                                right: $padding-medium;
+                            }
+                        }
+
+                        .restaurant-card-info
+                        {
+                            // width: calc(100% - (#{$pictogram-large-width} + #{$padding-medium} * 2));
+                            width: 100%;
+
+                            padding: $padding-large $padding-medium;
+
+
+
+                            &-name
+                            {
+                                margin-bottom: calc(1em / 2);
+
+                                font-weight: bold;
+                            }
+                        }
+                    }
+
+                    > .favorite
+                    {
+                        width: $pictogram-large-width;
+                        height: $pictogram-large-height;                        
+
+                        position: absolute;
+                        right: $padding-medium;
+                        bottom: $padding-large;
+                        z-index: 1;
+
+                        cursor: pointer;
+
+
+
+                        &::after
+                        {
+                            content: "";
+
+                            background: linear-gradient(to bottom, $color-1, $color-2);
+
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                            z-index: -1;
+
+                            transform-origin: 50% 100%;
+                            transform: scaleY(0);
+                        }
+
+                        &:active
+                        {
+                            &::after{ animation: favorite 200ms forwards;}
+                        }
+
+                        > img
+                        {
+                            width: $pictogram-large-width;
+                            height: $pictogram-large-height;
+                        }
+                    }
+                }
+
+                #restaurant-card-1 .restaurant-card-illustration { background-image: url("../../../../data/picture/banner/jay-wennington-N_Y88TWmGwA-unsplash.jpg"); }
+                #restaurant-card-2 .restaurant-card-illustration { background-image: url("../../../../data/picture/banner/stil-u2Lp8tXIcjw-unsplash.jpg"); }
+                #restaurant-card-3 .restaurant-card-illustration { background-image: url("../../../../data/picture/banner/toa-heftiba-DQKerTsQwi0-unsplash.jpg"); }
+                #restaurant-card-4 .restaurant-card-illustration { background-image: url("../../../../data/picture/banner/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"); }
+            }
+        }
+    // === end: restaurant ======================================================================================================================== //
+
+
+
+    // === @keyframes ============================================================================================================================= //
+        @keyframes functioning-step
+        {
+            0%{}
+
+            10%, 25%{ opacity: 1; }
+
+            35%, 100%{ opacity: 0; }
+        }
+
+        @keyframes favorite
+        {
+            0%{ transform: scaleY(0); }
+
+            100%{ transform: scaleY(1); }
+        }
+    // === end: @keyframes ======================================================================================================================== //
+
+    // === @media ================================================================================================================================= //
+        @media screen and (min-width: $breakpoint-desktop)
+        {
+            main{ flex-direction: row; }
+
+            #left-desktop
+            {
+                width: 350px;
+
+
+
+                #functioning{ background-color: $color-background-2; }
+            }
+
+            #right-desktop
+            {
+                width: calc(100% - 350px); // 100% - width of: #left-desktop
+
+
+
+                #restaurant
+                {
+                    background-color: $color-background-1;
+                    padding-top: calc(((2 * #{$padding-medium}) + 1rem - 1.5rem) / 2);
+                }
+            }
+        }
+    // === end: @media ============================================================================================================================ //
+// === end: index ================================================================================================================================= //

@@ -1,0 +1,48 @@
+// === @import ==================================================================================================================================== //
+    @import "../util/variable";
+    @import "../util/mixin";
+    @import "../util/fonction";
+// === end: @import =============================================================================================================================== //
+
+
+
+// === header ===================================================================================================================================== //
+    header
+    {
+        width: 100%;
+
+        padding: $padding-large $padding-large $padding-small $padding-large;
+        margin-bottom: 3px; // for box-shadow
+
+        background-color: $color-background-1;
+
+        box-shadow: 0px 3px 3px $color-shodow;
+
+
+
+        #navigation-main >  ul
+        {
+            width: 100%;
+
+            list-style-type: none;
+
+            display: flex;
+            flex-direction: row;
+
+
+
+            #back_arrow
+            {
+                width: $pictogram-medium-width;
+                height: $pictogram-medium-height;
+            }
+
+            #website-emblem
+            {
+                margin-left: calc(((100% - #{$website-emblem-medium-width}) / 2) - #{$pictogram-medium-width});  // to center the emblem
+
+                > img{ width: $website-emblem-medium-width; }
+            }
+        }
+    }
+// === end: header ================================================================================================================================ //
