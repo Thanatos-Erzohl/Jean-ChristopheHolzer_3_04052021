@@ -10,16 +10,27 @@ header #navigation-main > ul {
   list-style-type: none;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 header #navigation-main > ul #back_arrow {
   width: 20px;
   height: 20px;
+  position: absolute;
+  left: 0;
 }
-header #navigation-main > ul #website-emblem {
-  margin-left: calc(((100% - 170px) / 2) - 20px);
+header #navigation-main > ul #website-emblem > a {
+  display: flex;
 }
-header #navigation-main > ul #website-emblem > img {
+header #navigation-main > ul #website-emblem > a > img {
   width: 170px;
+}
+
+@media screen and (min-width: 1671px) {
+  header {
+    padding-left: calc(20px + ((100% - 1671px) / 2));
+  }
 }
 
 /*# sourceMappingURL=header.css.map */

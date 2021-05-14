@@ -48,4 +48,85 @@
             &::before{ opacity: 1; }
         }
     }
+
+    .favorite
+    {
+        width: $pictogram-large-width;
+        height: $pictogram-large-height;
+
+        position: absolute;
+        // right: ;
+        // bottom: ;
+        z-index: 1;
+
+
+
+        &::after
+        {
+            content: "";
+
+            background: linear-gradient(to bottom, $color-1, $color-2);
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+
+            transform-origin: 50% 100%;
+            transform: scaleY(0);
+        }
+
+        &:active
+        {
+            &::after{ animation: favorite 200ms forwards; }
+        }
+
+        > input[type = "checkbox"]
+        {
+            display: none;
+
+
+
+            &:checked + label
+            {
+                background: linear-gradient(to bottom, $color-1, $color-2);
+
+
+
+                > img
+                {
+                    &:first-child{ display: none; }
+                    &:last-child{ display: inherit; }
+                }
+            }
+        }
+
+        > label
+        {
+            display: flex;
+
+            cursor: pointer;
+
+
+
+            > img
+            {
+                width: $pictogram-large-width;
+                height: $pictogram-large-height;
+
+                &:last-child{ display: none; }
+            }
+        }
+    }
 // === end: button ================================================================================================================================ //
+
+// === @keyframes ================================================================================================================================= //
+    @keyframes favorite
+    {
+        0%{ transform: scaleY(0); }
+
+        100%{ transform: scaleY(1); }
+    }
+// === end: @keyframes ============================================================================================================================ //

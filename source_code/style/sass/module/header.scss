@@ -28,6 +28,10 @@
 
             display: flex;
             flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            position: relative;
 
 
 
@@ -35,14 +39,26 @@
             {
                 width: $pictogram-medium-width;
                 height: $pictogram-medium-height;
+
+                position: absolute;
+                left: 0;
             }
 
-            #website-emblem
+            #website-emblem > a
             {
-                margin-left: calc(((100% - #{$website-emblem-medium-width}) / 2) - #{$pictogram-medium-width});  // to center the emblem
+                display: flex;
+
+
 
                 > img{ width: $website-emblem-medium-width; }
             }
         }
     }
+
+    // === media ================================================================================================================================== //
+        @media screen and (min-width: #{$breakpoint-desktop-3})
+        {
+            header{ padding-left: calc(#{$padding-large} + ((100% - #{$breakpoint-desktop-3}) / 2)); }
+        }
+    // === end: media ============================================================================================================================= //
 // === end: header ================================================================================================================================ //

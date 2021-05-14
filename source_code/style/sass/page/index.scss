@@ -11,6 +11,72 @@
 // === end: header ================================================================================================================================ //
 
 // === index ====================================================================================================================================== //
+    // === loading ================================================================================================================================ //
+        .loading
+        {
+            width: 100%;
+            height: 100vh;
+
+            background-color: $color-background-1;
+
+            opacity: 1;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: absolute;
+            z-index: 999;
+
+            animation: loading 1000ms 3000ms ease-in-out forwards;
+
+
+
+            > div
+            {
+                width: 250px;
+                height: 250px;
+
+                border-radius: 125px;
+                background-color: $color-1;
+
+                position: relative;
+                z-index: 1;
+
+
+
+                &::after
+                {
+                    content: "";
+
+                    border-radius: 125px;
+                    background-color: $color-3;
+
+                    opacity: 0;
+
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    z-index: -1;
+
+                    animation: loading-after 3000ms forwards;
+                }
+
+                > img
+                {
+                    width: 250px;
+                    height: 250px;
+
+                    transform: rotate(0deg);
+
+                    animation: loading-spiner 3000ms ease-in-out;
+                }
+            }
+        }
+    // === end: loading =========================================================================================================================== //
+
     main
     {
         display: flex;
@@ -233,15 +299,21 @@
             > #restaurant-card_area
             {
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
+                flex-wrap: wrap;
+                column-gap: $margin-large;
 
 
 
                 > .restaurant-card
                 {
+                    width: min(100%, #{$restaurant-card-max-width});
+
                     margin-bottom: $margin-large;
 
                     border-radius: $border-radius-medium;
+
+                    background-color: $color-background-1;
 
                     @include shadow;
 
@@ -257,9 +329,9 @@
                         
                         > .restaurant-card-illustration
                         {
-                            width: min(100%, 500px);
+                            width: 100%;
 
-                            padding-bottom: min(54%, 270px);
+                            padding-bottom: 54%;
 
                             border-radius: $border-radius-medium $border-radius-medium 0px 0px;
 
@@ -290,7 +362,6 @@
 
                         .restaurant-card-info
                         {
-                            // width: calc(100% - (#{$pictogram-large-width} + #{$padding-medium} * 2));
                             width: 100%;
 
                             padding: $padding-large $padding-medium;
@@ -306,48 +377,12 @@
                         }
                     }
 
-                    > .favorite
+                    .favorite
                     {
-                        width: $pictogram-large-width;
-                        height: $pictogram-large-height;                        
-
-                        position: absolute;
                         right: $padding-medium;
-                        bottom: $padding-large;
-                        z-index: 1;
-
-                        cursor: pointer;
-
-
-
-                        &::after
-                        {
-                            content: "";
-
-                            background: linear-gradient(to bottom, $color-1, $color-2);
-
-                            position: absolute;
-                            top: 0;
-                            right: 0;
-                            bottom: 0;
-                            left: 0;
-                            z-index: -1;
-
-                            transform-origin: 50% 100%;
-                            transform: scaleY(0);
-                        }
-
-                        &:active
-                        {
-                            &::after{ animation: favorite 200ms forwards;}
-                        }
-
-                        > img
-                        {
-                            width: $pictogram-large-width;
-                            height: $pictogram-large-height;
-                        }
+                        bottom: calc(((2.5rem - #{$pictogram-medium-height}) / 2) + #{$padding-large});
                     }
+
                 }
 
                 #restaurant-card-1 .restaurant-card-illustration { background-image: url("../../../../data/picture/banner/jay-wennington-N_Y88TWmGwA-unsplash.jpg"); }
@@ -361,6 +396,28 @@
 
 
     // === @keyframes ============================================================================================================================= //
+        @keyframes loading
+        {
+            0%{}
+
+            100%{ opacity: 0; }
+            100%{z-index: -1;}
+        }
+
+        @keyframes loading-after
+        {
+            0%{}
+
+            100%{ opacity: 1; }
+        }
+
+        @keyframes loading-spiner
+        {
+            0%{}
+
+            100%{ transform: rotate(360deg); }
+        }
+
         @keyframes functioning-step
         {
             0%{}
@@ -369,41 +426,58 @@
 
             35%, 100%{ opacity: 0; }
         }
-
-        @keyframes favorite
-        {
-            0%{ transform: scaleY(0); }
-
-            100%{ transform: scaleY(1); }
-        }
     // === end: @keyframes ======================================================================================================================== //
 
     // === @media ================================================================================================================================= //
-        @media screen and (min-width: $breakpoint-desktop)
+        @media screen and (min-width: $breakpoint-tablette)
+        {
+            #block-right > #restaurant > #restaurant-card_area > .restaurant-card{ width: min(#{$restaurant-card-max-width}, calc((100% - #{$padding-large}) / 2)); }
+        }
+
+        @media screen and (min-width: $breakpoint-desktop-1)
         {
             main{ flex-direction: row; }
 
-            #left-desktop
+            #block-left
             {
                 width: 350px;
+
+                background-color: $color-background-2;
 
 
 
                 #functioning{ background-color: $color-background-2; }
             }
 
-            #right-desktop
+            #block-right
             {
                 width: calc(100% - 350px); // 100% - width of: #left-desktop
+
+                background-color: $color-background-1;
 
 
 
                 #restaurant
                 {
                     background-color: $color-background-1;
-                    padding-top: calc(((2 * #{$padding-medium}) + 1rem - 1.5rem) / 2);
+
+
+
+                    > #restaurant-card_area{ padding-top: calc(((2 * #{$padding-medium}) + 1rem - 1.5rem) / 2); }
                 }
             }
+        }
+
+        @media screen and (min-width: $breakpoint-desktop-2)
+        {
+            #block-right > #restaurant > #restaurant-card_area > .restaurant-card{ width: min(#{$restaurant-card-max-width}, calc((100% - 2 * #{$padding-large}) / 3)); }
+        }
+
+        @media screen and (min-width: #{$breakpoint-desktop-3})
+        {
+            main{ padding-left: calc((100% - #{$breakpoint-desktop-3}) / 2); }
+
+            #restaurant{ max-width: $breakpoint-desktop-3 - 350px - 1px; }
         }
     // === end: @media ============================================================================================================================ //
 // === end: index ================================================================================================================================= //

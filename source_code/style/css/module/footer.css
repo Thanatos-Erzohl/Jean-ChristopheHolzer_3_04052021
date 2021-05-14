@@ -25,4 +25,10 @@ footer > ul > li > a > p {
   color: #FFFFFF;
 }
 
+@media screen and (min-width: 1671px) {
+  footer {
+    padding-left: calc(20px + ((100% - 1671px) / 2));
+  }
+}
+
 /*# sourceMappingURL=footer.css.map */
