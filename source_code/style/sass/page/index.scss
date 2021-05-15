@@ -28,17 +28,21 @@
             position: absolute;
             z-index: 999;
 
-            animation: loading 1000ms 3000ms ease-in-out forwards;
+            animation: loading 1000ms $loading-time ease-in-out forwards;
 
 
 
             > div
             {
-                width: 250px;
-                height: 250px;
+                width: 290px;
+                height: 290px;
 
-                border-radius: 125px;
+                border-radius: 145px;
                 background-color: $color-1;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
                 position: relative;
                 z-index: 1;
@@ -49,7 +53,7 @@
                 {
                     content: "";
 
-                    border-radius: 125px;
+                    border-radius: 145px;
                     background-color: $color-3;
 
                     opacity: 0;
@@ -61,17 +65,17 @@
                     left: 0;
                     z-index: -1;
 
-                    animation: loading-after 3000ms forwards;
+                    animation: loading-after $loading-time forwards;
                 }
 
                 > img
                 {
-                    width: 250px;
-                    height: 250px;
+                    width: 300px;
+                    height: 300px;
 
                     transform: rotate(0deg);
 
-                    animation: loading-spiner 3000ms ease-in-out;
+                    animation: loading-spiner $loading-time ease-in-out;
                 }
             }
         }
@@ -261,7 +265,7 @@
                 {
                     &#{$i}
                     {
-                        &::after{ animation: functioning-step 6000ms (1500ms * ($i - 1)) infinite; }
+                        &::after{ animation: functioning-step 6000ms (1500ms * ($i - 1) + $loading-time + 1000ms) infinite; }
 
                         > .functioning-step-pictogram
                         {
@@ -271,7 +275,7 @@
                             {
                                 background-image: url("../../../../data/picture/pictogram/step-#{$i}-2.svg");
 
-                                animation: functioning-step 6000ms (1500ms * ($i - 1)) infinite;
+                                animation: functioning-step 6000ms (1500ms * ($i - 1) + $loading-time + 1000ms) infinite;
                             }
                         }
                     }

@@ -28,8 +28,8 @@ header #navigation-main > ul #website-emblem > a > img {
 }
 
 @media screen and (min-width: 1671px) {
-  header {
-    padding-left: calc(20px + ((100% - 1671px) / 2));
+  header #navigation-main > ul #back_arrow {
+    left: calc(((100% - 1671px) / 2) + 20px);
   }
 }
 

@@ -12,19 +12,22 @@
   align-items: center;
   position: absolute;
   z-index: 999;
-  animation: loading 1000ms 3000ms ease-in-out forwards;
+  animation: loading 1000ms 2000ms ease-in-out forwards;
 }
 .loading > div {
-  width: 250px;
-  height: 250px;
-  border-radius: 125px;
+  width: 290px;
+  height: 290px;
+  border-radius: 145px;
   background-color: #9356DC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   z-index: 1;
 }
 .loading > div::after {
   content: "";
-  border-radius: 125px;
+  border-radius: 145px;
   background-color: #99E2D0;
   opacity: 0;
   position: absolute;
@@ -33,13 +36,13 @@
   bottom: 0;
   left: 0;
   z-index: -1;
-  animation: loading-after 3000ms forwards;
+  animation: loading-after 2000ms forwards;
 }
 .loading > div > img {
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   transform: rotate(0deg);
-  animation: loading-spiner 3000ms ease-in-out;
+  animation: loading-spiner 2000ms ease-in-out;
 }
 
 main {
@@ -156,34 +159,34 @@ main {
   font-weight: bold;
 }
 #functioning > #functioning-step-1::after {
-  animation: functioning-step 6000ms 0ms infinite;
+  animation: functioning-step 6000ms 3000ms infinite;
 }
 #functioning > #functioning-step-1 > .functioning-step-pictogram {
   background-image: url("../../../../data/picture/pictogram/step-1.svg");
 }
 #functioning > #functioning-step-1 > .functioning-step-pictogram::after {
   background-image: url("../../../../data/picture/pictogram/step-1-2.svg");
-  animation: functioning-step 6000ms 0ms infinite;
+  animation: functioning-step 6000ms 3000ms infinite;
 }
 #functioning > #functioning-step-2::after {
-  animation: functioning-step 6000ms 1500ms infinite;
+  animation: functioning-step 6000ms 4500ms infinite;
 }
 #functioning > #functioning-step-2 > .functioning-step-pictogram {
   background-image: url("../../../../data/picture/pictogram/step-2.svg");
 }
 #functioning > #functioning-step-2 > .functioning-step-pictogram::after {
   background-image: url("../../../../data/picture/pictogram/step-2-2.svg");
-  animation: functioning-step 6000ms 1500ms infinite;
+  animation: functioning-step 6000ms 4500ms infinite;
 }
 #functioning > #functioning-step-3::after {
-  animation: functioning-step 6000ms 3000ms infinite;
+  animation: functioning-step 6000ms 6000ms infinite;
 }
 #functioning > #functioning-step-3 > .functioning-step-pictogram {
   background-image: url("../../../../data/picture/pictogram/step-3.svg");
 }
 #functioning > #functioning-step-3 > .functioning-step-pictogram::after {
   background-image: url("../../../../data/picture/pictogram/step-3-2.svg");
-  animation: functioning-step 6000ms 3000ms infinite;
+  animation: functioning-step 6000ms 6000ms infinite;
 }
 
 #restaurant {
