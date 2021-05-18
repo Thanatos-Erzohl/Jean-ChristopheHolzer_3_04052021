@@ -7,40 +7,17 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="156.45103mm"
-   height="140.20151mm"
-   viewBox="0 0 156.45103 140.20151"
+   width="158.75mm"
+   height="158.75mm"
+   viewBox="0 0 158.75 158.75"
    version="1.1"
    id="svg8"
-   sodipodi:docname="heart-2.svg"
+   sodipodi:docname="heart-negative-b.svg"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
   <defs
-     id="defs2">
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient4630">
-      <stop
-         style="stop-color:#9356dc;stop-opacity:1;"
-         offset="0"
-         id="stop4626" />
-      <stop
-         style="stop-color:#ff79da;stop-opacity:1"
-         offset="1"
-         id="stop4628" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4630"
-       id="linearGradient4632"
-       x1="4.3076653e-14"
-       y1="16.541689"
-       x2="1.5543122e-15"
-       y2="148.83336"
-       gradientUnits="userSpaceOnUse" />
-  </defs>
+     id="defs2" />
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -49,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="-114.77944"
-     inkscape:cy="49.535677"
+     inkscape:cx="-342.57782"
+     inkscape:cy="79.536015"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -62,8 +39,8 @@
     <inkscape:grid
        type="xygrid"
        id="grid4518"
-       originx="-1.1494762"
-       originy="-145.52098" />
+       originx="1.3229166e-07"
+       originy="-137.58338" />
   </sodipodi:namedview>
   <metadata
      id="metadata5">
@@ -81,12 +58,18 @@
      inkscape:label="Calque 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-1.1494762,-11.277535)">
+     transform="translate(1.3229166e-7,-0.66662582)">
+    <path
+       style="fill:#f6f6f6;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 0,2.5195312 V 602.51953 H 600 V 2.5195312 Z M 166.91211,52.675781 C 227.38112,52.32774 285.9375,85.175782 300,162.51953 c 40,-219.999997 440.00003,-79.999999 220,160 l -220,240 -220,-240 C -62.656254,166.89453 55.380383,53.317724 166.91211,52.675781 Z"
+       transform="scale(0.26458333)"
+       id="path4531"
+       inkscape:connector-curvature="0" />
     <path
        sodipodi:nodetypes="ccccc"
        inkscape:connector-curvature="0"
        id="path4533"
        d="M 21.16666,85.33334 C -37.04167,21.833333 68.79166,-15.20833 79.375,43 89.95833,-15.20833 195.79167,21.833333 137.58333,85.33334 L 79.375,148.83333 Z"
-       style="fill:url(#linearGradient4632);fill-opacity:1;stroke:#000000;stroke-width:5.29166651;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0" />
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:5.29166667;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   </g>
 </svg>

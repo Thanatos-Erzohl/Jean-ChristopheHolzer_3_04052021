@@ -19,7 +19,7 @@
 
 
 
-        &::before
+        &::after
         {
             content: "";
 
@@ -45,7 +45,7 @@
 
 
 
-            &::before{ opacity: 1; }
+            &::after{ opacity: 1; }
         }
     }
 
@@ -54,34 +54,10 @@
         width: $pictogram-large-width;
         height: $pictogram-large-height;
 
-        position: absolute;
-        // right: ;
-        // bottom: ;
+        position: relative;
         z-index: 1;
 
 
-
-        &::after
-        {
-            content: "";
-
-            background: linear-gradient(to bottom, $color-1, $color-2);
-
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: -1;
-
-            transform-origin: 50% 100%;
-            transform: scaleY(0);
-        }
-
-        &:active
-        {
-            &::after{ animation: favorite 200ms forwards; }
-        }
 
         > input[type = "checkbox"]
         {
@@ -91,9 +67,7 @@
 
             &:checked + label
             {
-                background: linear-gradient(to bottom, $color-1, $color-2);
-
-
+                &::after{ animation: favorite 500ms forwards; }
 
                 > img
                 {
@@ -111,6 +85,23 @@
 
 
 
+            &::after
+            {
+                content: "";
+
+                background: linear-gradient(to bottom, $color-1, $color-2);
+
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: -1;
+
+                transform-origin: bottom;
+                transform: scaleY(0);
+            }
+
             > img
             {
                 width: $pictogram-large-width;
@@ -125,7 +116,7 @@
 // === @keyframes ================================================================================================================================= //
     @keyframes favorite
     {
-        0%{ transform: scaleY(0); }
+        0%{}
 
         100%{ transform: scaleY(1); }
     }

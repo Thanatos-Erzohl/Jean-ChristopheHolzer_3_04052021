@@ -3,16 +3,18 @@
 }
 
 .loading {
-  width: 100%;
-  height: 100vh;
   background-color: #FFFFFF;
   opacity: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: 999;
-  animation: loading 1000ms 2000ms ease-in-out forwards;
+  animation: loading 800ms 2200ms ease-in-out forwards;
 }
 .loading > div {
   width: 290px;
@@ -28,7 +30,7 @@
 .loading > div::after {
   content: "";
   border-radius: 145px;
-  background-color: #99E2D0;
+  background-color: #FF79DA;
   opacity: 0;
   position: absolute;
   top: 0;
@@ -212,6 +214,10 @@ main {
   background-color: #FFFFFF;
   box-shadow: 5px 5px 5px #c0c0c0;
   position: relative;
+  transition: box-shadow 200ms;
+}
+#restaurant > #restaurant-card_area > .restaurant-card:hover {
+  box-shadow: 8px 8px 8px #a7a7a7;
 }
 #restaurant > #restaurant-card_area > .restaurant-card > a {
   text-decoration: none;
@@ -244,6 +250,7 @@ main {
   font-weight: bold;
 }
 #restaurant > #restaurant-card_area > .restaurant-card .favorite {
+  position: absolute;
   right: 15px;
   bottom: calc(((2.5rem - 20px) / 2) + 20px);
 }
@@ -303,6 +310,9 @@ main {
   #block-left #functioning {
     background-color: #F6F6F6;
   }
+  #block-left #functioning > .functioning-step {
+    background-color: #FFFFFF;
+  }
 
   #block-right {
     width: calc(100% - 350px);
@@ -311,22 +321,10 @@ main {
   #block-right #restaurant {
     background-color: #FFFFFF;
   }
-  #block-right #restaurant > #restaurant-card_area {
-    padding-top: calc(((2 * 15px) + 1rem - 1.5rem) / 2);
-  }
 }
 @media screen and (min-width: 1251px) {
   #block-right > #restaurant > #restaurant-card_area > .restaurant-card {
     width: min(420px, calc((100% - 2 * 20px) / 3));
-  }
-}
-@media screen and (min-width: 1671px) {
-  main {
-    padding-left: calc((100% - 1671px) / 2);
-  }
-
-  #restaurant {
-    max-width: 1320px;
   }
 }
 

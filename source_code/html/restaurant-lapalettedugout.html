@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+
+
+<html lang = "fr">
+    <head>
+        <meta charset = "UTF-8">
+
+        <meta name = "author" content = "Jean-Christophe Holzer">
+        <meta name = "description" content = "">
+        <meta name = "keyword" content = "">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+
+        <title>ohmyfood</title>
+        <link rel = "icon" type = "image/png" href = "../../data/picture/emblem/ohmyfood@2x-short.svg">
+        
+        <link rel = "stylesheet" type = "text/css" href = "../../source_code/style/css/base/main.css">
+        <link rel = "stylesheet" type = "text/css" href = "../../source_code/style/css/module/header.css">
+        <link rel = "stylesheet" type = "text/css" href = "../../source_code/style/css/module/footer.css">
+        <link rel = "stylesheet" type = "text/css" href = "../../source_code/style/css/page/restaurant.css">
+    </head>
+
+    <body>
+        <header>
+            <!-- === navigation ============================================================================================================================== -->
+				<nav id = navigation-main>
+					<ul>
+						<li id = "back_arrow">
+							<a href = "../../index.html">
+								<img src = "../../data/picture/pictogram/arrow-left-solid.svg" alt = "">
+							</a>
+						</li>
+
+						<li id = "website-emblem">
+							<a href = "index.html">
+								<img src = "../../data/picture/emblem/ohmyfood@2x.svg" alt = "Emblème ohmyfood">
+							</a>
+						</li>
+					</ul>
+				</nav>
+			<!-- === end: navigation ========================================================================================================================= -->
+        </header>
+
+        <main>
+			<!-- === banner ================================================================================================================================== -->
+				<div class = "banner">
+					<div class = "banner-illustration" id = "banner-illustration-1"></div>
+
+					<div>
+						<h1>La palette du goût</h1>
+
+						<div class = "favorite">
+							<input id = "favorite-restaurant" type = "checkbox" name = "favorite-restaurant">
+
+							<label for = "favorite-restaurant">
+								<img src = "../../data/picture/pictogram/heart-negative-b.svg" alt = "">
+								<img src = "../../data/picture/pictogram/heart-negative-2b.svg" alt = "">
+							</label>
+						</div>
+					</div>
+				</div>
+			<!-- === end: banner ============================================================================================================================= -->
+
+			<!-- === order =================================================================================================================================== -->
+				<div id = "order">
+					<form id = "restaurant-menu" method = "post" action = "#">
+						<!-- === first course ================================================================================================================ -->
+							<div id = "restaurant-menu-first_course">
+								<p><span>ENTR</span>ÉES</p>
+
+								<input id = "restaurant-menu-first_course-1" type = "checkbox" name = "restaurant-menu-first_course-1">
+
+								<label for = "restaurant-menu-first_course-1">
+									<span>
+										<span>Fricassée d'escargot</span>
+										<span>Au piment d'Espelette</span>
+									</span>
+
+									<span class = "price">25€</span>
+
+									<span><img src = "../../data/picture/pictogram/check-circle-solid.svg" alt = ""></span>
+								</label>
+
+								<input id = "restaurant-menu-first_course-2" type = "checkbox" name = "restaurant-menu-first_course-2">
+
+								<label for = "restaurant-menu-first_course-2">
+									<span>
+										<span>Foie gras de canard mi-cuit</span>
+										<span>Et ses copeaux de truffe noire</span>
+									</span>
+
+									<span class = "price">35€</span>
+
+									<span><img src = "../../data/picture/pictogram/check-circle-solid.svg" alt = ""></span>
+								</label>
+
+								<input id = "restaurant-menu-first_course-3" type = "checkbox" name = "restaurant-menu-first_course-3">
+
+								<label for = "restaurant-menu-first_course-3">
+									<span>
+										<span>Oeuf au plat</span>
+										<span>Assaisonné à la truffe sur lit de caviar</span>
+									</span>
+
+									<span class = "price">20€</span>
+
+									<span><img src = "../../data/picture/pictogram/check-circle-solid.svg" alt = ""></span>
+								</label>
+							</div>
+						<!-- === end: first course =========================================================================================================== -->
+
+						<!-- === dish ======================================================================================================================== -->
+							<div id = "restaurant-menu-dish">
+								<p><span>PLAT</span>S</p>
+
+								<input id = "restaurant-menu-dish-1" type = "checkbox" name = "restaurant-menu-dish-1">
+
+								<label for = "restaurant-menu-dish-1">
+									<span>
+										<span>Filet de boeuf aux herbes</span>
+										<span>Accompagné de sa ribambelle de légumes</span>
+									</span>
+
+									<span class = "price">40€</span>
+
+									<span><img src = "../../data/picture/pictogram/check-circle-solid.svg" alt = ""></span>
+								</label>
+
+								<input id = "restaurant-menu-dish-2" type = "checkbox" name = "restaurant-menu-dish-2">
+
+								<label for = "restaurant-menu-dish-2">
+									<span>
+										<span>Parmentier de queue de boeuf</span>
+										<span>À la truffe noire sur sa purée de panais</span>
+									</span>
+
+									<span class = "price">35€</span>
+
+									<span><img src = "../../data/picture/pictogram/check-circle-solid.svg" alt = ""></span>
+								</label>
+
+								<input id = "restaurant-menu-dish-3" type = "checkbox" name = "restaurant-menu-dish-3">
+
+								<label for = "restaurant-menu-dish-3">
+									<span>
+										<span>Filet de turbot</span>
+										<span>Aux agrumes</span>
+									</span>
+
+									<span class = "price">44€</span>
+
+									<span><img src = "../../data/picture/pictogram/check-circle-solid.svg" alt = ""></span>
+								</label>
+							</div>
+						<!-- === end: dish =================================================================================================================== -->
+
+						<!-- === dessert ===================================================================================================================== -->
+							<div id = "restaurant-menu-dessert">
+								<p><span>DESS</span>ERTS</p>
+
+								<input id = "restaurant-menu-dessert-1" type = "checkbox" name = "restaurant-menu-dessert-1">
+
+								<label for = "restaurant-menu-dessert-1">
+									<span>
+										<span>Paris-Brest</span>
+										<span>Revisité</span>
+									</span>
+
+									<span class = "price">18€</span>
+
+									<span><img src = "../../data/picture/pictogram/check-circle-solid.svg" alt = ""></span>
+								</label>
+
+								<input id = "restaurant-menu-dessert-2" type = "checkbox" name = "restaurant-menu-dessert-2">
+
+								<label for = "restaurant-menu-dessert-2">
+									<span>
+										<span>Macaron au chocolat d'exception</span>
+										<span>Et glace à la vanille de Madagascar</span>
+									</span>
+
+									<span class = "price">22€</span>
+
+									<span><img src = "../../data/picture/pictogram/check-circle-solid.svg" alt = ""></span>
+								</label>
+
+								<input id = "restaurant-menu-dessert-3" type = "checkbox" name = "restaurant-menu-dessert-3">
+
+								<label for = "restaurant-menu-dessert-3">
+									<span>
+										<span>Mousse au chocolat</span>
+										<span>Au piment d'Espelette et à la truffe noire</span>
+									</span>
+
+									<span class = "price">23€</span>
+
+									<span><img src = "../../data/picture/pictogram/check-circle-solid.svg" alt = ""></span>
+								</label>
+							</div>
+						<!-- === end: dessert ================================================================================================================ -->
+					</form>
+
+					<div>
+						<a class = "button" href = "#">Commander</a>
+					</div>
+				</div>
+			<!-- === end: order ============================================================================================================================== -->
+        </main>
+
+        <footer>
+            <img src = "../../data/picture/emblem/ohmyfood@2x-white.svg" alt = "Emblème ohmyfood">
+
+			<ul>
+				<li> <!-- suggest a restaurant -->
+					<a href = "#">
+						<img src = "../../data/picture/pictogram/utensils-solid.svg" alt = "">
+						<p>Proposer un restaurant</p>
+					</a>
+				</li>
+
+				<li> <!-- to become partener -->
+					<a href = "#">
+						<img src = "../../data/picture/pictogram/hands-helping-solid.svg" alt = "">
+						<p>Devenir partenaire</p>
+					</a>
+				</li>
+
+				<li> <!-- legal notice -->
+					<a href = "#"><p>Mentions légales</p></a>
+				</li>
+
+				<li> <!-- contact -->
+					<a href = "mailto:#"><p>Contact</p></a>
+				</li>
+			</ul>
+        </footer>
+    </body>
+</html>
