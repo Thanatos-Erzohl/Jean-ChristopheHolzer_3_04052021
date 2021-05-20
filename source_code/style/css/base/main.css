@@ -39,13 +39,11 @@
   display: none;
 }
 .favorite > input[type=checkbox]:checked + label::after {
-  animation: favorite 500ms forwards;
-}
-.favorite > input[type=checkbox]:checked + label > img:first-child {
-  display: none;
+  transform: scaleY(1);
 }
 .favorite > input[type=checkbox]:checked + label > img:last-child {
-  display: inherit;
+  opacity: 1;
+  visibility: visible;
 }
 .favorite > label {
   display: flex;
@@ -62,20 +60,22 @@
   z-index: -1;
   transform-origin: bottom;
   transform: scaleY(0);
+  transition: all 500ms linear;
 }
 .favorite > label > img {
   width: 24px;
   height: 24px;
 }
+.favorite > label > img:first-child {
+  position: relative;
+}
 .favorite > label > img:last-child {
-  display: none;
+  opacity: 0;
+  position: absolute;
+  visibility: hidden;
+  transition: visibility 0ms 500ms linear;
 }
 
-@keyframes favorite {
-  100% {
-    transform: scaleY(1);
-  }
-}
 @font-face {
   font-family: "roboto";
   src: url("../../../../data/font/roboto/Roboto-Regular.ttf") format("truetype");

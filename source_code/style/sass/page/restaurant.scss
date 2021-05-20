@@ -113,11 +113,13 @@
                         {
                             > span:last-child
                             {
-                                animation: restaurant-menu-checked 500ms forwards;
+                                width: 80px;
+
+                                transform: translateX(0px);
 
 
 
-                                > img{ animation: restaurant-menu-checked-rotate 500ms forwards; }
+                                > img{ transform: rotate(360deg); }
                             }
                         }
                     }
@@ -145,11 +147,7 @@
 
                         transform: translateY(#{$padding-large});
 
-                        transition: box-shadow 200ms;
 
-
-
-                        &:hover{ @include shadow-hover; }
 
                         @for $i from 1 through 4
                         {
@@ -193,6 +191,8 @@
                             padding: $padding-medium;
 
                             font-weight: bold;
+
+                            align-self: flex-end;
                         }
 
                         > span:last-child
@@ -206,6 +206,7 @@
                             align-items: center;
 
                             transform: translateX(#{$pictogram-large-width});
+                            transition: all $checked-time;
 
 
 
@@ -214,14 +215,15 @@
                                 width: $pictogram-large-width;
                                 height: $pictogram-large-height;
 
-                                transform: rotate(0deg)
+                                transform: rotate(0deg);
+                                transition: all $checked-time;
                             }
                         }
                     }
                 }
             }
 
-            > div
+            > #commander
             {
                 display: flex;
                 justify-content: center;
@@ -240,25 +242,6 @@
                 
                 transform: translateY(0px);
             }
-        }
-
-        @keyframes restaurant-menu-checked
-        {
-            0%{}
-
-            100%
-            {
-                width: 80px;
-
-                transform: translateX(0px);
-            }
-        }
-
-        @keyframes restaurant-menu-checked-rotate
-        {
-            0%{}
-
-            100%{ transform: rotate(360deg); }
         }
     // === end: @keyframes ======================================================================================================================== //
 

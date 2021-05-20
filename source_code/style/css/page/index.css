@@ -214,10 +214,6 @@ main {
   background-color: #FFFFFF;
   box-shadow: 5px 5px 5px #c0c0c0;
   position: relative;
-  transition: box-shadow 200ms;
-}
-#restaurant > #restaurant-card_area > .restaurant-card:hover {
-  box-shadow: 8px 8px 8px #a7a7a7;
 }
 #restaurant > #restaurant-card_area > .restaurant-card > a {
   text-decoration: none;

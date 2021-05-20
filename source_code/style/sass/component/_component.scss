@@ -67,12 +67,16 @@
 
             &:checked + label
             {
-                &::after{ animation: favorite 500ms forwards; }
+                &::after{ transform: scaleY(1); }
 
                 > img
                 {
-                    &:first-child{ display: none; }
-                    &:last-child{ display: inherit; }
+                    &:last-child
+                    {
+                        opacity: 1;
+
+                        visibility: visible;
+                    }
                 }
             }
         }
@@ -100,6 +104,8 @@
 
                 transform-origin: bottom;
                 transform: scaleY(0);
+
+                transition: all $checked-time linear;
             }
 
             > img
@@ -107,17 +113,21 @@
                 width: $pictogram-large-width;
                 height: $pictogram-large-height;
 
-                &:last-child{ display: none; }
+                &:first-child{ position: relative; }
+
+                &:last-child
+                {
+                    opacity: 0;
+
+                    position: absolute;
+
+                    visibility: hidden;
+
+                    transition: visibility 0ms $checked-time linear;
+                }
             }
         }
     }
 // === end: button ================================================================================================================================ //
 
-// === @keyframes ================================================================================================================================= //
-    @keyframes favorite
-    {
-        0%{}
-
-        100%{ transform: scaleY(1); }
-    }
-// === end: @keyframes ============================================================================================================================ //
+// === keyframe

@@ -324,11 +324,7 @@
 
                     position: relative;
 
-                    transition: box-shadow 200ms;
 
-
-
-                    &:hover{ @include shadow-hover; }
 
                     > a
                     {
